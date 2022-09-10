@@ -12,15 +12,25 @@ export default class Movie extends Component  {
 //image to represent movie, it's name, short blurb about plot, maybe add year, director, etc
 //star rating
 //review list?
+
+//constructor and super because you have to call both 
 constructor(props){
     super(props);
+    //set state for each movie
     this.state={
-        moviePoster: props.moviePoster,
-        movieName: props.movieName,
-        movieSynopsis: props.movieSynopsis,
-        /*starRating: props.starRating*/
-        /*reviewsList: props.reviewsList*/
+        //moviePoster: props.moviePoster, *if i can add pictures
+        movieName: props.movieName, //self explanatory
+        movieSynopsis: props.movieSynopsis, //quick blurb about plot
+        starRating: , //begins count at zero
+        reviewsList: [] //empty array where reviews will sit
+
     };
+    /*  set up the actions/interactions that you can have with 
+        the move object. How to click into reviews, select stars, etc */
+    
+
+
+
 }
     render() {
         return (
