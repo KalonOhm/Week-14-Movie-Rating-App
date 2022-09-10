@@ -10,8 +10,9 @@ export default class MovieList extends Component  {
 
     render() {
         return (
-            <div className="container"> [/* Main part of the page, container, contains list of movies*/]
+            <div className="container"> {[/* Main part of the page, container, contains list of movies*/]}
                 <h1 className='container'>How do you feel about these movies?</h1>
+                <Movie />
             </div>
         );
     }

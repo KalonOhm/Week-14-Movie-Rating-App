@@ -1,11 +1,8 @@
-/*Each movie component should contain the movie's information, the associated 
-reviews, and the star rating system*/
+/*Each movie component should contain the movie's 
+information, the associated reviews, etc*/
 
 import React, {Component} from 'react';
-import Star from './Stars';
-import ReviewList from './ReviewList';
-
-
+import ReviewList from "./ReviewList";
 
 export default class Movie extends Component  {
 //constructor for the movie object
@@ -21,28 +18,23 @@ constructor(props){
         //moviePoster: props.moviePoster, *if i can add pictures
         movieName: props.movieName, //self explanatory
         movieSynopsis: props.movieSynopsis, //quick blurb about plot
-        starRating: , //begins count at zero
-        reviewsList: [] //empty array where reviews will sit
+        //starRating: , //begins count at zero
+        // reviewsList: [] //empty array where reviews will sit
 
-    };
-    /*  set up the actions/interactions that you can have with 
-        the move object. How to click into reviews, select stars, etc */
-    
-
-
+    };    
 
 }
+
     render() {
         return (
             <div className="container">
-                <img{/* insert the moviePoster*/}/>
+                <img url="#"/>
                 <p>{this.state.movieName}</p>
                 <h2>Synopsis: {this.state.movieSynopsis}</h2>
-
-                {/*insert Stars here*/}
-
                 {/*insert ReviewList here*/}
-
+                <div>
+                    <ReviewList />
+                </div>
 
             </div>
         )

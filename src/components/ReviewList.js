@@ -6,10 +6,12 @@ import React, {Component} from 'react';
 export default class ReviewList extends Component  {
     //constructor for the list of reviews
 
+
+
     render() {
         return (
-            <div>
-                
+            <div className='container'>
+                {this.props.reviews}
             </div>
         
         
