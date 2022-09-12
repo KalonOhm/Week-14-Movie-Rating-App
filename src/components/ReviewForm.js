@@ -30,8 +30,10 @@ export default class ReviewForm extends Component  {
     
     render() {
         return (
+            <>
+            <h3>   What's your take?</h3>
             <div className='form'>
-                What's your take?
+             
                 <input type="text" value={this.state.userName } name="user" className='form-control' label="User Name" 
 
                 <
@@ -40,6 +42,7 @@ export default class ReviewForm extends Component  {
 
                 <button type="button" onClick={this.onSubmit}>Submit Review</button>
             </div>
+            </>
         )
     }
 }

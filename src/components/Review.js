@@ -17,9 +17,7 @@ export default class Review extends Component  {
 
     render() {
         return (
-            <div className='container'>
-
-                <div>
+            <>
                     {
                         this.props.reviewList.map((review) => (
                             <div className='card'>
@@ -28,9 +26,7 @@ export default class Review extends Component  {
                             </div>
                         ))
                     }
-                </div>
-                
-            </div>
+            </>
         );
     }
 }

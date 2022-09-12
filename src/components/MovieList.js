@@ -1,19 +1,46 @@
 import React, {Component} from 'react';
 
 import Movie from './Movie';
-import ReviewList from './ReviewList';
 
 //list of all movies we can rate/review
 //container to hold multiple movies which will hold own reviews etc
 
+
+
 export default class MovieList extends Component  {
 
     render() {
+        let sampleMovie ={
+            Poster: null,
+            Title: 'Movie Title',
+            Director: 'Steve Spiels',
+            Runtime: '120 min',
+            MpaRating: 'NC-17',
+            YearReleased: 2001,
+            id: 0,
+            Synopsis: "buncha text"
+        }
+        let sampleMovie2 ={
+            Poster: null,
+            Title: 'Movie Title 2',
+            Director: 'Steve Spiels',
+            Runtime: '210 min',
+            MpaRating: 'G',
+            YearReleased: 1990,
+            id: 1,
+            Synopsis: "buncha text"
+        }
+
+
+
+
+
         return (
-            <div className="container"> {[/* Main part of the page, container, contains list of movies*/]}
+            <>
                 <h1 className='container'>How do you feel about these movies?</h1>
-                <Movie />
-            </div>
+                <Movie {...sampleMovie}/>
+                <Movie {...sampleMovie2}/>
+            </>
         );
     }
 }
