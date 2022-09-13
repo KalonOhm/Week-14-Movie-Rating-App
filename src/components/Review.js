@@ -11,9 +11,6 @@ export default class Review extends Component  {
         }
     }
 
-    submitReview = (newReview) => {
-        this.setState = ({ review: this.state.review.concat(newReview)});
-    }
 
     render() {
         return (
