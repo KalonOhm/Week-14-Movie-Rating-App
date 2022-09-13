@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StarRating from './StarRating';
+// import StarRating from './StarRating'; broken
 import Review from './Review';
 
 
@@ -11,21 +11,25 @@ export default class ReviewForm extends Component  {
 
     constructor(props){
         super(props);
-
+        
+        //initialize form with empty state in the fields
         this.state = {
-            reviewer: props.reviewer,
-            reviewContent: props.reviewContent,
-            ratingStars: props.ratingStars,
+            reviewer: '',
+            reviewText: '',
+            ratingStars: '',
         }
     };
 
 
-    // onSubmit = (e) => {
-    //     e.preventDefault; //don't want submitting to reset page
-    //     this.props.submitReview(this.state.userNameValue); //allows users to "sign" their review, instead of leaving anonymous
-    //     this.props.submitReview(this.state.reviewTextContent); //actual review content
-    //     const resetInput = {userName: '', reviewText: ''} //reset input field to empty
-    // }
+    onSubmit = (e) => {
+        e.preventDefault; //don't want submitting to reset page
+        
+        this.props.submitReview(this.state.reviewer); //allows users to "sign" their review, instead of leaving anonymous
+        
+        this.props.submitReview(this.state.reviewText); //actual review content
+        
+        const resetInput = {userName: '', reviewText: ''} //reset input field to empty
+    }
 
     
 

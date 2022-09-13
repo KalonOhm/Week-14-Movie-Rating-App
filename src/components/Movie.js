@@ -1,5 +1,5 @@
 /*Each movie component should display the movie's 
-information, the associated reviews, etc*/
+props(properties), the associated reviews, etc*/
 //which was described in an object in the MovieList above
 
 import React, { Component } from "react";
@@ -9,9 +9,10 @@ export default class Movie extends Component {
   render() {
     return (
       <div className="card">
+        <h2>{this.props.Title}</h2>
         <img src={this.props.Poster} alt="Poster for movie" />
         <div>
-          <h2>{this.props.Title}</h2>
+          
           {/* year released, rating, runtime, director */}
           <p>
             Release Year: {this.props.YearReleased}
@@ -24,9 +25,9 @@ export default class Movie extends Component {
             <br></br>
           </p>
           <p>Synopsis: {this.props.Synopsis}</p>
-          {/*insert ReviewList here*/}
+          
         </div>
-        <div>
+        <div>{/*insert ReviewList here*/}
           <ReviewList />
         </div>
       </div>

@@ -29,7 +29,8 @@ export default class MovieList extends Component {
       Synopsis: "buncha text again",
     };
 
-    //then create html. use spread operator {...} so each property can be accessed individually withing the movie component instance
+    //then create html. use spread operator {...} so each property 
+    //can be accessed individually withing the movie component instance
     return (
       <>
         <h1 className="container">How do you feel about these movies?</h1>

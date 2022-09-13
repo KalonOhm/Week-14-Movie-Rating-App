@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Review from './Review';
-import ReviewForm from './ReviewForm';
+//import ReviewForm from './ReviewForm';
 
-//list of reviews undernead the write-review form
+//list of reviews underneath the write-review form
 
 export default class ReviewList extends Component  {
     //constructor for the list of reviews
@@ -11,7 +11,7 @@ export default class ReviewList extends Component  {
 
         this.state = {
             reviewer: props.reviewer,
-            reviewContent: props.reviewContent,
+            reviewText: props.reviewText,
             reviewRating: props.reviewRating,
         }
     };
@@ -19,21 +19,18 @@ export default class ReviewList extends Component  {
 
     render() {
         let reviews = [];
-        let i = 0;
 
         if (this.state.reviews) {
-            for (let Review of this.state.reviews){
-                i++;
-                reviews.push(<ReviewList key={index} {...Review} />);
+            for (let review of this.state.reviews){
+                reviews.push(<Review {...review}/>)
+                
             }
         }
 
 
         return (
             <div className='container'>
-                {this.props.ReviewList.map((Review) => (
-                    
-                ))}
+                <Review />
             </div>
         
         
