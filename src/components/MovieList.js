@@ -33,7 +33,7 @@ export default class MovieList extends Component {
     //can be accessed individually withing the movie component instance
     return (
       <>
-        <h1 className="container">How do you feel about these movies?</h1>
+        <h1>How do you feel about these movies?</h1>
         <Movie {...sampleMovie} />
         <Movie {...sampleMovie2} />
       </>

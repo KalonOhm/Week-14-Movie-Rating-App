@@ -3,9 +3,14 @@ props(properties), the associated reviews, etc*/
 //which was described in an object in the MovieList above
 
 import React, { Component } from "react";
+import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
 
 export default class Movie extends Component {
+  myfunc(data){
+      console.log(`This is my data, ${data}`)
+  }  
+  
   render() {
     return (
       <div className="card">
@@ -14,18 +19,21 @@ export default class Movie extends Component {
         <div>
           
           {/* year released, rating, runtime, director */}
-          <p>
-            Release Year: {this.props.YearReleased}
-            <br></br>
-            Director: {this.props.Director}
-            <br></br>
-            MPA Rating: {this.props.MpaRating}
-            <br></br>
-            Runtime: {this.props.Runtime}
-            <br></br>
-          </p>
+          <ul>
+            <li>Release Year: {this.props.YearReleased}</li>
+            
+            <li>Director: {this.props.Director}</li>
+            
+            <li>MPA Rating: {this.props.MpaRating}</li>
+            
+            <li>Runtime: {this.props.Runtime}</li>
+            
+          </ul>
           <p>Synopsis: {this.props.Synopsis}</p>
           
+        </div>
+        <div>
+          <ReviewForm myfunc={(myData) => this.myfunc(myData)}/>
         </div>
         <div>{/*insert ReviewList here*/}
           <ReviewList />

@@ -30,7 +30,8 @@ export default class ReviewList extends Component  {
 
         return (
             <div className='container'>
-                <Review />
+                ReviewList placeholder
+                {/* <Review /> */}
             </div>
         
         
